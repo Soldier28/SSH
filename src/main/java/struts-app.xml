@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+    <package name="appf" extends="json-default" namespace="/appf">
+ <!-- 用户登录 -->
+        <action name="appLogin_*" class="com.pedmoni.moudels.app.action.appUser.AppUserAction" method="{1}">
+			<result name="success" type="json" >
+				<param name="root">result</param>
+			</result>
+	    </action>
+	</package>
+    <!-- JSON定义配置 -->
+    <package name="scestaff" extends="json-default" namespace="/scestaff" strict-method-invocation="false">
+        <!-- JSON定义 -->
+        <action name="admin_*" class="com.pedmoni.moudels.sys.action.admin.AdminAction" method="{1}">
+            <result name="success" type="json">
+                <param name="root">result</param>
+            </result>
+        </action>
+        <action name="staff_*" class="com.pedmoni.moudels.sys.action.secstaff.SecStaffAction" method="{1}">
+            <result name="success" type="json">
+                <param name="root">result</param>
+            </result>
+        </action>
+        <action name="video_*" class="com.pedmoni.moudels.sys.action.video.VideoAction" method="{1}">
+            <result name="success" type="json">
+                <param name="root">result</param>
+            </result>
+        </action>
+        <action name="area_*" class="com.pedmoni.moudels.sys.action.area.AreaAction" method="{1}">
+            <result name="success" type="json">
+                <param name="root">result</param>
+            </result>
+        </action>
+        <action name="secMsg_*" class="com.pedmoni.moudels.sys.action.secmsg.SecMessageAction" method="{1}">
+            <result name="success" type="json">
+                <param name="root">result</param>
+            </result>
+        </action>
+        <action name="warnMsg_*" class="com.pedmoni.moudels.sys.action.warnmsg.WarnMessageAction" method="{1}">
+            <result name="success" type="json">
+                <param name="root">result</param>
+            </result>
+        </action>
+    </package>
+</struts>    

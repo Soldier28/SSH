@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.mikey.youngvolunteer.model.SysUserEntity" table="sys_user" schema="ped_moni">
+        <id name="userId">
+            <column name="user_id" sql-type="int(11)"/>
+        </id>
+        <property name="loginAccount">
+            <column name="login_account" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="loginPassword">
+            <column name="login_password" sql-type="varchar(255)" not-null="true" default="123456"/>
+        </property>
+        <property name="userName">
+            <column name="user_name" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="roleType">
+            <column name="role_type" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="userAvailable">
+            <column name="user_available" sql-type="int(2)"/>
+        </property>
+        <!--<one-to-one name="secstaff" class="com.pedmoni.moudels.sys.model.PedSecStaffEntity"/>-->
+        <!--<one-to-one name="admin" class="com.pedmoni.moudels.sys.model.SysAdminEntity" cascade="all"/>-->
+    </class>
+</hibernate-mapping>

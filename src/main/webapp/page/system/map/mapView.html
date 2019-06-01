@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Hello, World</title>
+    <style type="text/css">
+        html{height:100%}
+        body{height:100%;margin:0px;padding:0px}
+        #container{height:100%}
+    </style>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=KS5CyRZ5fWbhjczjMlGYIz1pGS68hltl">
+        //v3.0版本的引用方式：src="http://api.map.baidu.com/api?v=3.0&ak=您的密钥"
+    </script>
+    <!--//开源库-->
+    <script type="text/javascript" src="http://api.map.baidu.com/library/TextIconOverlay/1.2/src/TextIconOverlay_min.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/library/MarkerClusterer/1.2/src/MarkerClusterer_min.js"></script>
+</head>
+
+<body>
+<div id="container"></div>
+<script type="text/javascript">
+    // 初始化地图，设置中心点坐标和地图级别
+    var map = new BMap.Map("container");
+    var point = new BMap.Point(109.404, 29.915);
+    map.centerAndZoom(point, 6);
+
+    map.addControl(new BMap.NavigationControl());
+    map.addControl(new BMap.ScaleControl());
+    map.addControl(new BMap.OverviewMapControl());
+    map.addControl(new BMap.MapTypeControl());//类型
+    map.setCurrentCity("北京"); // 仅当设置城市信息时，MapTypeControl的切换功能才能可用
+    map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+
+
+    //渲染数据
+    function addMarker(data){  // 创建图标对象
+
+        var MAX = 100;
+        var marker = null;
+        var markers = [];
+        var point = null;
+
+        var myIcon = new BMap.Icon("/Ped_Moni_war/images/video.png", new BMap.Size(50, 50), {});
+        // 创建标注对象并添加到地图
+        for (var i = 0; i < MAX; i++) {
+
+            //var point = new BMap.Point(Math.random() * 40 + 85, Math.random() * 30 + 21);
+            point = new BMap.Point(Math.random() * 40 + 85, Math.random() * 30 + 21);
+            marker = new BMap.Marker(point, {icon: myIcon});
+            //监听标注事件
+            marker.addEventListener("click", function () {
+                var opts = {
+                    width: 250,     // 信息窗口宽度
+                    height: 100,     // 信息窗口高度
+                    title: "摄像头信息:"  // 信息窗口标题
+                }
+
+                var infoWindow = new BMap.InfoWindow("ip地址:"+"192.168.0.1</br>"+"经纬度：116.404, 39.915</br>"+"位置名称：测试位置", opts);  // 创建信息窗口对象
+                map.openInfoWindow(infoWindow, this.point);      // 打开信息窗口
+            });
+
+            markers.push(marker);
+        }
+        var markerClusterer = new BMapLib.MarkerClusterer(map, {markers:markers});
+    }
+
+    addMarker(null);
+</script>
+</body>
+<script type="text/javascript" src="/Ped_Moni_war/layui/layui.js"></script>
+<script type="text/javascript" src="/Ped_Moni_war/js/config.js"></script>
+<script type="text/javascript" src="mapView.js"></script>
+</html>
