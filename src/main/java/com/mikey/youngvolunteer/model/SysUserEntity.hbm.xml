@@ -4,7 +4,7 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
-    <class name="com.mikey.youngvolunteer.model.SysUserEntity" table="sys_user" schema="ped_moni">
+    <class name="com.mikey.youngvolunteer.model.SysUserEntity" table="sys_user" schema="young_volunteer">
         <id name="userId">
             <column name="user_id" sql-type="int(11)"/>
         </id>
@@ -12,7 +12,7 @@
             <column name="login_account" sql-type="varchar(255)" not-null="true"/>
         </property>
         <property name="loginPassword">
-            <column name="login_password" sql-type="varchar(255)" not-null="true" default="123456"/>
+            <column name="login_password" sql-type="varchar(255)" not-null="true"/>
         </property>
         <property name="userName">
             <column name="user_name" sql-type="varchar(255)" not-null="true"/>
@@ -23,7 +23,5 @@
         <property name="userAvailable">
             <column name="user_available" sql-type="int(2)"/>
         </property>
-        <!--<one-to-one name="secstaff" class="com.pedmoni.moudels.sys.model.PedSecStaffEntity"/>-->
-        <!--<one-to-one name="admin" class="com.pedmoni.moudels.sys.model.SysAdminEntity" cascade="all"/>-->
     </class>
 </hibernate-mapping>

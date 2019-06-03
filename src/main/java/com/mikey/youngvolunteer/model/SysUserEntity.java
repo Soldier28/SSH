@@ -1,26 +1,23 @@
 package com.mikey.youngvolunteer.model;
 
 import javax.persistence.*;
-import java.io.Serializable;
 
 /**
  * @Program: Ped_Moni_Gen
  * @Author: 麦奇
  * @Email： 1625017540@qq.com
- * @Create: 2019-05-16 07:52
+ * @Create: 2019-06-02 15:14
  * @Describe：
  **/
 @Entity
-@Table(name = "sys_user", schema = "ped_moni", catalog = "")
-public class SysUserEntity implements Serializable {
+@Table(name = "sys_user", schema = "young_volunteer", catalog = "")
+public class SysUserEntity {
     private int userId;
     private String loginAccount;
     private String loginPassword;
     private String userName;
     private Integer roleType;
     private int userAvailable;
-//    private PedSecStaffEntity secstaff;
-//    private SysAdminEntity admin;
 
     @Id
     @Column(name = "user_id", nullable = false)
@@ -110,41 +107,4 @@ public class SysUserEntity implements Serializable {
         result = 31 * result + userAvailable;
         return result;
     }
-
-//    @OneToOne(mappedBy = "user")
-//    public PedSecStaffEntity getSecstaff() {
-//        return secstaff;
-//    }
-
-//    public void setSecstaff(PedSecStaffEntity secstaff) {
-//        this.secstaff = secstaff;
-//    }
-
-//    @OneToOne(mappedBy = "user")
-//    public SysAdminEntity getAdmin() {
-//        return admin;
-//    }
-
-//    public void setAdmin(SysAdminEntity admin) {
-//        this.admin = admin;
-//    }
-
-    @Override
-    public String toString() {
-        return "SysUserEntity{" +
-                "userId=" + userId +
-                ", loginAccount='" + loginAccount + '\'' +
-                ", loginPassword='" + loginPassword + '\'' +
-                ", userName='" + userName + '\'' +
-                ", roleType=" + roleType +
-                ", userAvailable=" + userAvailable +
-//                ", secstaff=" + secstaff +
-//                ", admin=" + admin +
-                '}';
-    }
-
-    public SysUserEntity() {
-    }
-
-
 }

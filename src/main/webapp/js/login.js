@@ -26,21 +26,16 @@ layui.use(['form','layer','jquery'],function(){
         var num = show_num.join("");
 
         if (val == num){
-            console.log($("#loginAccount").val());
             $.post("./login_userLogin.action",{
                 loginAccount : $("#loginAccount").val(),
                 loginPassword : $("#loginPassword").val()
             },function(data){
-                console.log(JSON.stringify(data));
-                if (data.code === 0 && data.data.roleType===1){
+                if (data.code === 0){
                     //保存用户信息到session中
                     window.sessionStorage.setItem("userName",data.data.userName);
                     window.sessionStorage.setItem("userId",data.data.userId);
-                    window.location.href = "page/common/index.html";
-                }else if (data.data.roleType===1){
-                    layer.msg("此用户未授权登入");
-                }
-                else {
+                    window.location.href = "/YoungVolunteer_war/page/common/index.jsp";
+                } else {
                     layer.msg(data.msg);
                     $("#loginPassword").val('');//置为空
                 }
@@ -142,7 +137,7 @@ layui.use(['form','layer','jquery'],function(){
             layer.close(index);
             layer.msg("退出登入成功！");
         },1000);
-        window.location.href = "/Ped_Moni_war/index.html";
+        window.location.href = "/index.html";
         // window.location.href = $tool.getContent()+"index.html";
     })
 

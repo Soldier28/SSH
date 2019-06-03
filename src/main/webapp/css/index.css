@@ -49,7 +49,7 @@ iframe{ position:absolute; height:100%; width:100%; border:none;}
 #lock-box p{ color:#e60000; }
 /*顶部*/
 .header{ z-index:2000;}
-.logo{ color: #fff; float: left; line-height:60px; font-size:18px; padding:0 25px; text-align: center; width:150px;}
+.logo{ color: #fff; float: left; line-height:60px; font-size:16px; padding:0 25px; text-align: center; width:150px;}
 .hideMenu{ float:left; width:20px; height:20px; margin-top:15px; font-size:17px; line-height:20px; text-align:center; padding:5px 5px; color:#fff; background-color:#1AA094; }
 .hideMenu:hover{ color:#fff; }
 .layui-nav cite{ margin-left: 5px;}
@@ -146,7 +146,7 @@ iframe{ position:absolute; height:100%; width:100%; border:none;}
 	.logo{ width:150px; font-size: 14px;}
 	#userInfo>a{ padding:0 10px;}
 	.mobileTopLevelMenus[mobile] li>a{ padding:0 17px 0 15px;}
-	.logo,.layui-nav.top_menu{ padding:0 5px;}
+	.logo,.layui-nav.top_menu{ padding:0 3px;}
 	.adminName,.top_menu dd[pc]{ display: none !important; }
 	*[mobile],.top_menu .layui-nav-item.showNotice[pc]{ display:inline-block !important; }
 }

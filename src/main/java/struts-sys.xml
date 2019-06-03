@@ -4,7 +4,7 @@
 	<!-- 定义系统设置模块 -->
 	<package name="system" extends="json-default" namespace="/" strict-method-invocation="false">
 		<!-- 登陆 -->
-		<action name="login_*" class="com.pedmoni.moudels.sys.action.login.LoginAction" method="{1}">
+		<action name="login_*" class="com.mikey.youngvolunteer.action.login.LoginAction" method="{1}">
 			<result name="success" type="json">
 				<param name="root">result</param>
 			</result>
@@ -14,7 +14,7 @@
 	<!-- JSON定义配置 -->
 	<package name="sysJson" extends="json-default" namespace="/sysJson" strict-method-invocation="false">
 		<!-- JSON定义 -->
-		<action name="admin_*" class="com.pedmoni.moudels.sys.action.admin.AdminAction" method="{1}">
+		<action name="admin_*" class="com.mikey.youngvolunteer.moudels" method="{1}">
 			<result name="success" type="json">
 				<param name="root">result</param>
 			</result>
