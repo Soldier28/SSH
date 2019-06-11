@@ -4,7 +4,7 @@
 	<!-- 定义系统设置模块 -->
 	<package name="system" extends="json-default" namespace="/" strict-method-invocation="false">
 		<!-- 登陆 -->
-		<action name="login_*" class="com.mikey.youngvolunteer.action.login.LoginAction" method="{1}">
+		<action name="login_*" class="com.mikey.youngvolunteer.models.action.login.LoginAction" method="{1}">
 			<result name="success" type="json">
 				<param name="root">result</param>
 			</result>
