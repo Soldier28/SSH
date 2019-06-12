@@ -32,6 +32,7 @@ layui.use(['form','layer','upload','laydate',"address"],function(){
             }
         }
     })
+
     //选择出生日期
     laydate.render({
         elem: '.userBirthday',

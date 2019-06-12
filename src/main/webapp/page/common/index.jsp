@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
-  program: YoungVolunteer
-  Author: 麦奇
-  Email： 1625017540@qq.com
+  program: SSH
+  Author: soldier
+  Email： 583403411@qq.com
   Date: 6/3/19
   Time: 10:44 PM
   To change this template use File | Settings | File Templates.
@@ -20,18 +20,9 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="format-detection" content="telephone=no">
-    <script>
-        //获取路径
-        // var pathName = window.document.location.pathname;
-        //截取，得到项目名称
-        // var projectName = pathName.substring(0,pathName.substr(1).indexOf('/')+1);
-
-        // console.log(projectName);
-    </script>
-
-    <link rel="icon" href="/YoungVolunteer_war/images/favicon.ico">
-    <link rel="stylesheet" href="/YoungVolunteer_war/layui/css/layui.css" media="all" />
-    <link rel="stylesheet" href="/YoungVolunteer_war/css/index.css" media="all" />
+    <link rel="icon" href="/SSH_war/images/favicon.ico">
+    <link rel="stylesheet" href="/SSH_war/layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="/SSH_war/css/index.css" media="all" />
 </head>
 <body class="main_body">
 <div class="layui-layout layui-layout-admin">
@@ -69,16 +60,12 @@
                 <li class="layui-nav-item" pc>
                     <!--<a href="javascript:;" class="clearCache"><i class="layui-icon" data-icon="&#xe640;">&#xe640;</i><cite>清除缓存</cite></a>-->
                 </li>
-                <!--<li class="layui-nav-item lockcms" pc>-->
-                <!--<a href="javascript:;"><i class="seraph icon-lock"></i><cite>锁屏</cite></a>-->
-                <!--</li>-->
                 <li class="layui-nav-item" id="userInfo">
-                    <a href="javascript:;"><img src="/YoungVolunteer_war/images/face.jpg" class="layui-nav-img userAvatar" width="35" height="35"><cite class="adminName">admin</cite></a>
+                    <a href="javascript:;"><img src="/SSH_war/images/face.jpg" class="layui-nav-img userAvatar" width="35" height="35"><cite class="adminName">admin</cite></a>
                     <dl class="layui-nav-child">
-                        <dd><a href="javascript:;" data-url="/YoungVolunteer_war/page/user/userInfo.html"><i class="seraph icon-ziliao" data-icon="icon-ziliao"></i><cite>个人资料</cite></a></dd>
-                        <dd><a href="javascript:;" data-url="/YoungVolunteer_war/page/user/changePwd.html"><i class="seraph icon-xiugai" data-icon="icon-xiugai"></i><cite>修改密码</cite></a></dd>
-                        <!--<dd><a href="javascript:;" class="showNotice"><i class="layui-icon">&#xe645;</i><cite>系统公告</cite><span class="layui-badge-dot"></span></a></dd>-->
-                        <dd pc><a href="javascript:;" class="functionSetting"><i class="layui-icon">&#xe620;</i><cite>功能设定</cite><!--<span class="layui-badge-dot"></span>--></a></dd>
+                        <dd><a href="javascript:;" data-url="/SSH_war/page/user/userInfo.html"><i class="seraph icon-ziliao" data-icon="icon-ziliao"></i><cite>个人资料</cite></a></dd>
+                        <dd><a href="javascript:;" data-url="/SSH_war/page/user/changePwd.html"><i class="seraph icon-xiugai" data-icon="icon-xiugai"></i><cite>修改密码</cite></a></dd>
+                        <dd pc><a href="javascript:;" class="functionSetting"><i class="layui-icon">&#xe620;</i><cite>功能设定</cite></a></dd>
                         <dd pc><a href="javascript:;" class="changeSkin"><i class="layui-icon">&#xe61b;</i><cite>更换皮肤</cite></a></dd>
                         <dd><a href="javascript:;" class="signOut"><i class="seraph icon-tuichu"></i><cite>退出</cite></a></dd>
                     </dl>
@@ -88,23 +75,18 @@
     </div>
     <!-- 左侧导航 -->
     <div class="layui-side layui-bg-black">
-        <!--<div class="user-photo">-->
-        <!--<a class="img" title="我的头像" ><img src="images/face.jpg" class="userAvatar"></a>-->
-        <!--<p>你好！<span class="userName">驊驊龔頾</span>, 欢迎登录</p>-->
-        <!--</div>-->
-        <!-- 搜索 -->
         <div class="layui-form component">
             <select name="search" id="search" lay-search lay-filter="searchPage">
                 <option value="">搜索页面或功能</option>
-                <option value="1">摄像头</option>
-                <option value="2">预警短信</option>
+                <option value="1">在线报名</option>
+                <option value="2">活动签到</option>
             </select>
             <i class="layui-icon">&#xe615;</i>
         </div>
         <div class="navBar layui-side-scroll" id="navBar">
             <ul class="layui-nav layui-nav-tree">
                 <li class="layui-nav-item layui-this">
-                    <a href="javascript:;" data-url="/YoungVolunteer_war/login_view.action?view=main"><i class="layui-icon" data-icon=""></i><cite>后台首页</cite></a>
+                    <a href="javascript:;" data-url="/SSH_war/login_view.action?view=main"><i class="layui-icon" data-icon=""></i><cite>后台首页</cite></a>
                 </li>
             </ul>
         </div>
@@ -127,14 +109,14 @@
             </ul>
             <div class="layui-tab-content clildFrame">
                 <div class="layui-tab-item layui-show">
-                    <iframe src="/YoungVolunteer_war/page/common/main.jsp"></iframe>
+                    <iframe src="/SSH_war/page/common/main.jsp"></iframe>
                 </div>
             </div>
         </div>
     </div>
     <!-- 底部 -->
     <div class="layui-footer footer">
-        <p><span>copyright @2019 麦奇</span></p>
+        <p><span>copyright @2019 soldier</span></p>
     </div>
 </div>
 
@@ -142,9 +124,9 @@
 <div class="site-tree-mobile"><i class="layui-icon">&#xe602;</i></div>
 <div class="site-mobile-shade"></div>
 
-<script type="text/javascript" src="/YoungVolunteer_war/layui/layui.js"></script>
-<script type="text/javascript" src="/YoungVolunteer_war/js/index.js"></script>
-<script type="text/javascript" src="/YoungVolunteer_war/js/cache.js"></script>
+<script type="text/javascript" src="/SSH_war/layui/layui.js"></script>
+<script type="text/javascript" src="/SSH_war/js/index.js"></script>
+<script type="text/javascript" src="/SSH_war/js/cache.js"></script>
 </body>
 </html>
 

@@ -11,7 +11,7 @@
 ">
 	<task:annotation-driven/>
 	 <!--自动扫描(DAO) -->
-	<context:component-scan base-package="com.mikey.youngvolunteer.models.dao"/>
+	<context:component-scan base-package="com.ssh.models.dao"/>
 	<!-- 自动扫描(Service) -->
-    <context:component-scan base-package=" com.mikey.youngvolunteer.models.service"/>
+    <context:component-scan base-package=" com.ssh.models.service"/>
 </beans>

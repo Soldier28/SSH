@@ -36,7 +36,7 @@
   <!--过滤url-->
   <filter>
     <filter-name>urlFilter</filter-name>
-    <filter-class>com.mikey.youngvolunteer.config.UrlFilter</filter-class>
+    <filter-class>com.ssh.config.UrlFilter</filter-class>
     <init-param>
       <param-name>DEFAULT_URI_ENCODE</param-name>
       <param-value>UTF-8</param-value>

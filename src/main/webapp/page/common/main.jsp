@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
-  program: YoungVolunteer
-  Author: 麦奇
-  Email： 1625017540@qq.com
+  program: SSH
+  Author: soldier
+  Email： 583403411@qq.com
   Date: 6/3/19
   Time: 10:44 PM
   To change this template use File | Settings | File Templates.
@@ -19,9 +19,9 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" href="/YoungVolunteer_war/layui/css/layui.css" media="all" />
-    <link rel="stylesheet" href="/YoungVolunteer_war/css/public.css" media="all" />
-    <link rel="stylesheet" href="/YoungVolunteer_war/css/bootstrap.min.css" media="all" />
+    <link rel="stylesheet" href="/SSH_war/layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="/SSH_war/css/public.css" media="all" />
+    <link rel="stylesheet" href="/SSH_war/css/bootstrap.min.css" media="all" />
 
 
     <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
@@ -193,10 +193,10 @@
     </div>
 </div>
 
-<script type="text/javascript" src="/YoungVolunteer_war/layui/layui.js"></script>
-<script type="text/javascript" src="/YoungVolunteer_war/js/config.js"></script>
-<script type="text/javascript" src="/YoungVolunteer_war/js/tool.js"></script>
-<script type="text/javascript" src="/YoungVolunteer_war/js/main.js"></script>
+<script type="text/javascript" src="/SSH_war/layui/layui.js"></script>
+<script type="text/javascript" src="/SSH_war/js/config.js"></script>
+<script type="text/javascript" src="/SSH_war/js/tool.js"></script>
+<script type="text/javascript" src="/SSH_war/js/main.js"></script>
 
 </body>
 </html>

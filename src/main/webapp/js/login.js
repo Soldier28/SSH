@@ -34,7 +34,7 @@ layui.use(['form','layer','jquery'],function(){
                     //保存用户信息到session中
                     window.sessionStorage.setItem("userName",data.data.userName);
                     window.sessionStorage.setItem("userId",data.data.userId);
-                    window.location.href = "/YoungVolunteer_war/page/common/index.jsp";
+                    window.location.href = "/SSH_war/page/common/index.jsp";
                 } else {
                     layer.msg(data.msg);
                     $("#loginPassword").val('');//置为空
